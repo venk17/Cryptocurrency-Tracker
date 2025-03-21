@@ -1,0 +1,16 @@
+.currency_logo {
+  width: 40px;
+  height: 40px;
+}
+.currency_cell {
+  color: #ffffff;
+}
+.currency_cell img {
+  padding-right: 1rem;
+}
+.currency_row {
+  margin: 3px 5px;
+}
+.currency_row td {
+  padding: 1rem;
+}
