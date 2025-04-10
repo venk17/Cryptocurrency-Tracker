@@ -1,3 +1,14 @@
 .bg_container {
-  background-color: #000000;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+  .bg_container {
+    padding: 40px;
+  }
 }
