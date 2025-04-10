@@ -1,22 +1,108 @@
-.CryptocurrenciesList_container {
-  width: 80%;
+.crypto-list-container {
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
 }
 
-.heading {
+.crypto-heading {
   color: #00e7ff;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.list_container {
-  border: 2px solid #00e7ff;
-  border-radius: 12px;
+.crypto-banner {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 30px;
 }
-.list_container thead tr th {
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 231, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #00e7ff;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error-container {
+  color: #ff6b6b;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 107, 107, 0.1);
+  border-radius: 8px;
+}
+
+.retry-btn {
+  margin-top: 15px;
+  padding: 8px 20px;
+  background-color: #00e7ff;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.crypto-table {
+  width: 100%;
+  border: 4px solid #00e7ff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-header {
+  display: flex;
   background-color: #092e33;
+  padding: 15px 25px;
+  font-weight: bold;
   color: white;
-  padding: 2rem;
+}
+
+.header-cell {
+  flex: 1;
+  text-align: right;
+}
+
+.header-cell:first-child {
+  flex: 2;
+  text-align: left;
+}
+
+.currency-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .crypto-heading {
+    font-size: 24px;
+  }
+  
+  .table-header {
+    display: none;
+  }
+  
+  .crypto-table {
+    border: none;
+  }
 }
