@@ -1,17 +1,22 @@
 import React from 'react'
 import './index.css'
 
-const CryptocurrencyItem = props => {
-  const {details} = props
-  const {currencyName, usdValue, euroValue, currencyLogo} = details
+const CryptocurrencyItem = ({currency}) => {
+  const {currency_name, usd_value, euro_value, currency_logo} = currency
 
   return (
-    <li className="currency_item">
-      <div className="currency_details">
-        <img src={currencyLogo} alt={currencyName} className="currency_logo" />
-        <p className="currency_name">{currencyName}</p>
-        <p className="currency_value">{usdValue}</p>
-        <p className="currency_value">{euroValue}</p>
+    <li className="currency-item">
+      <div className="currency-info">
+        <img
+          src={currency_logo}
+          alt={currency_name}
+          className="currency-logo"
+        />
+        <p className="currency-name">{currency_name}</p>
+      </div>
+      <div className="currency-values">
+        <p className="currency-value">${parseFloat(usd_value).toFixed(2)}</p>
+        <p className="currency-value">€{parseFloat(euro_value).toFixed(2)}</p>
       </div>
     </li>
   )
