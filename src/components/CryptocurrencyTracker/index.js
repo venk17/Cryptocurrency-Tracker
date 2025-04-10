@@ -5,7 +5,7 @@ import './index.css'
 class CryptocurrencyTracker extends Component {
   render() {
     return (
-      <div className="bg_container">
+      <div className="crypto-tracker-container">
         <CryptocurrenciesList />
       </div>
     )
